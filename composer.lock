@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d4842c22e789d247c4b660e69490545f",
+    "content-hash": "0df5ba5cfa4869fab2078a03641fe490",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -960,17 +960,11 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v8.67.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/framework.git",
-                "reference": "fc52acafd069aedc079bf8f17d1a4af4ef489b1e"
-            },
+            "version": "8.x-dev",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/fc52acafd069aedc079bf8f17d1a4af4ef489b1e",
-                "reference": "fc52acafd069aedc079bf8f17d1a4af4ef489b1e",
-                "shasum": ""
+                "type": "path",
+                "url": "../framework",
+                "reference": "9362a29ce298428591369be8d101d51876406fc8"
             },
             "require": {
                 "doctrine/inflector": "^1.4|^2.0",
@@ -1107,7 +1101,14 @@
                     ]
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "files": [
+                    "tests/Database/stubs/MigrationCreatorFakeMigration.php"
+                ],
+                "psr-4": {
+                    "Illuminate\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "MIT"
             ],
@@ -1127,7 +1128,9 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-10-22T13:27:12+00:00"
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "laravel/sanctum",
